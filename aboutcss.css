@@ -1,0 +1,239 @@
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* overflow: auto; */
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  overflow: scroll;
+
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.modal::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.modal {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.modal.show {
+  display: block;
+  opacity: 1;
+}
+
+.modal-content {
+  background-color: rgba(18, 18, 18, 0.95);
+  margin: 5% auto;
+  width: 85%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 8px;
+  overflow: auto;
+  box-shadow: 0 0 20px rgba(30, 59, 66, 0.3);
+  position: sticky;
+  color: white;
+  animation: modalFadeIn 0.3s;
+  
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.1) translateX(-200px);
+    transform-origin: left left;
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+    transform-origin: left left;
+  }
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+  z-index: 10;
+}
+
+.close:hover {
+  color: #3498db;
+}
+
+.modal-body {
+  padding: 30px;
+}
+
+.about-title {
+  color: #3498db;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.about-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 90%;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.skill-tag {
+  background-color: rgba(52, 152, 219, 0.2);
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  transition: all 0.3s;
+}
+
+.skill-tag:hover {
+  background-color: rgba(52, 152, 219, 0.5);
+  transform: translateY(-2px);
+}
+
+.stack-title {
+  color: #3498db;
+  font-size: 1.8rem;
+  margin: 30px 0 20px;
+  font-weight: 600;
+}
+
+.mern-stack {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.stack-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.stack-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.m-logo {
+  filter: hue-rotate(100deg) brightness(1.2);
+}
+
+.e-logo {
+  filter: grayscale(1) brightness(2);
+}
+
+.r-logo {
+  filter: hue-rotate(180deg) brightness(1.2);
+}
+
+.n-logo {
+  filter: hue-rotate(80deg) brightness(1.2);
+}
+
+
+
+@media screen and (max-width: 768px) {
+  
+  .modal {
+    height: 100vh;
+  }
+  .modal-content {
+    width: 95%;
+    
+    margin: 10% auto;
+    box-shadow: 0 2px 5px rgba(180, 159, 159, 0.1);
+  }
+
+  .logo {
+    display: none;
+  }
+  .mern-stack {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+ 
+  .about-text {
+    max-width: 80%;
+  }
+
+  .latest-works {
+    transform: translateY(0px);
+  }
+
+  .stack-title {
+   position: relative;
+  }
+
+ 
+  
+  
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+  z-index: 10;
+}
+
+.close:hover {
+  color: #3498db;
+  animation: rotateWheel 200ms linear ;
+}
+
+@keyframes rotateWheel {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
