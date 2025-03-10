@@ -246,7 +246,7 @@
           </div>
         </div>
       </div>
-      <div class="absolute inset-0 mx-auto self-center w-screen-2xl h-full" id="wrapper-canvas"></div>
+      <div class="absolute inset-0 mx-auto self-center block w-screen-2xl h-full" id="wrapper-canvas"></div>
       <div class="flex -mt-10 relative">
         <div class="w-full px-4 max-w-screen-xl mx-auto">
           <img
@@ -1109,7 +1109,9 @@
         <div class="w-full">
           <img src="./assets/images/contact-me.svg" alt="phone" />
         </div>
-        <form class="w-full" name="contactUS" netlify>
+        <form class="w-full" name="contactUS" method="post" netlify>
+          <input type="hidden" name="form-name" value="contactUS" />
+ 
           <label
             for="name"
             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
